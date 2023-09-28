@@ -7,12 +7,16 @@ Analizar una secuencia de ADN con Go
 ```
 docker-compose up -d
 ```
+### Ver LOGS DE CONTENEDOR PARA DESARROLLO. (See DEV CONTAINER LOGS)
+```
+docker logs -f dna-analysis-go-container
+```
 
 ### CONSTRUIR UNA IMAGEN PARA PRODUCCIÓN. (BUILD IMAGE (PROD))
 ```
 docker build --no-cache -t dna-analysis-go:lite -f Dockerfile.prod .
 ```
-### Entonces CORRER UN CONTENEDOR PARA DESARROLLO. (Then RUN CONTAINER (PROD))
+### Entonces CORRER UN CONTENEDOR PARA PRODUCCIÓN. (Then RUN CONTAINER (PROD))
 ```
 docker run -d -p 8181:8080 --name dna-analysus-go-with-lite dna-analysis-go:lite
 ```
